@@ -103,7 +103,7 @@ Console output
 Where N indicates the remaining opponents health (after the shot) and
  M indicates the remaining opponents armor (after the shot)
     • If a player has no bullets left on each of his next turns print “No ammo left” followed by a newline.
-    ​ 
+
 Restrictions
 Code should compile under the C 11 standard.
 Code should not use any non-standard extensions.
