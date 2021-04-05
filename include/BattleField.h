@@ -13,4 +13,7 @@ void buyPistols(BattleField* bf);
 
 void startBattle(BattleField* bf);
 
+void pistolInit(Player *currPlayer, PistolType pistolType, int damage, int clipSize, int ammo);
+void playerInit(Player *currPlayer, int healthInput, int armorInput, int indx) ;
+
 #endif /* BATTLEFIELD_H_ */

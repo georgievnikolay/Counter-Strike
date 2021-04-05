@@ -1,0 +1,3 @@
+/home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles/rebuild_cache.dir
+/home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles/counter_strike.dir
+/home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles/edit_cache.dir

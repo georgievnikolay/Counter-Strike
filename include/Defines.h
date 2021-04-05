@@ -1,9 +1,9 @@
 #ifndef DEFINES_H_
 #define DEFINES_H_
 
-enum PistolType {
+typedef enum {
   GLOCK, DESERT_EAGLE
-};
+} PistolType;
 
 enum GlockDefines {
   ROUNDS_PER_FIRE = 3

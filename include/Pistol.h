@@ -4,7 +4,7 @@
 #include "Defines.h"
 
 typedef struct {
-  enum PistolType pistolType;
+  PistolType pistolType;
   int damagePerRound;
   int clipSize;
   int currClipBullets;
