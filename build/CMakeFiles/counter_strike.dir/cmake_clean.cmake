@@ -1,6 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/counter_strike.dir/src/BattleField.c.o"
   "CMakeFiles/counter_strike.dir/src/BattleField.c.o.d"
+  "CMakeFiles/counter_strike.dir/src/Pistol.c.o"
+  "CMakeFiles/counter_strike.dir/src/Pistol.c.o.d"
+  "CMakeFiles/counter_strike.dir/src/Player.c.o"
+  "CMakeFiles/counter_strike.dir/src/Player.c.o.d"
+  "CMakeFiles/counter_strike.dir/src/Vector.c.o"
+  "CMakeFiles/counter_strike.dir/src/Vector.c.o.d"
   "CMakeFiles/counter_strike.dir/src/main.c.o"
   "CMakeFiles/counter_strike.dir/src/main.c.o.d"
   "counter_strike"

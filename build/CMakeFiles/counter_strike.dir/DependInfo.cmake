@@ -9,6 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/BattleField.c" "CMakeFiles/counter_strike.dir/src/BattleField.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/BattleField.c.o.d"
+  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/Pistol.c" "CMakeFiles/counter_strike.dir/src/Pistol.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/Pistol.c.o.d"
+  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/Player.c" "CMakeFiles/counter_strike.dir/src/Player.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/Player.c.o.d"
+  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/Vector.c" "CMakeFiles/counter_strike.dir/src/Vector.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/Vector.c.o.d"
   "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/main.c" "CMakeFiles/counter_strike.dir/src/main.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/main.c.o.d"
   )
 

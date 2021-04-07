@@ -153,6 +153,78 @@ src/BattleField.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/BattleField.c.s
 .PHONY : src/BattleField.c.s
 
+src/Pistol.o: src/Pistol.c.o
+.PHONY : src/Pistol.o
+
+# target to build an object file
+src/Pistol.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Pistol.c.o
+.PHONY : src/Pistol.c.o
+
+src/Pistol.i: src/Pistol.c.i
+.PHONY : src/Pistol.i
+
+# target to preprocess a source file
+src/Pistol.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Pistol.c.i
+.PHONY : src/Pistol.c.i
+
+src/Pistol.s: src/Pistol.c.s
+.PHONY : src/Pistol.s
+
+# target to generate assembly for a file
+src/Pistol.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Pistol.c.s
+.PHONY : src/Pistol.c.s
+
+src/Player.o: src/Player.c.o
+.PHONY : src/Player.o
+
+# target to build an object file
+src/Player.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Player.c.o
+.PHONY : src/Player.c.o
+
+src/Player.i: src/Player.c.i
+.PHONY : src/Player.i
+
+# target to preprocess a source file
+src/Player.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Player.c.i
+.PHONY : src/Player.c.i
+
+src/Player.s: src/Player.c.s
+.PHONY : src/Player.s
+
+# target to generate assembly for a file
+src/Player.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Player.c.s
+.PHONY : src/Player.c.s
+
+src/Vector.o: src/Vector.c.o
+.PHONY : src/Vector.o
+
+# target to build an object file
+src/Vector.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Vector.c.o
+.PHONY : src/Vector.c.o
+
+src/Vector.i: src/Vector.c.i
+.PHONY : src/Vector.i
+
+# target to preprocess a source file
+src/Vector.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Vector.c.i
+.PHONY : src/Vector.c.i
+
+src/Vector.s: src/Vector.c.s
+.PHONY : src/Vector.s
+
+# target to generate assembly for a file
+src/Vector.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/src/Vector.c.s
+.PHONY : src/Vector.c.s
+
 src/main.o: src/main.c.o
 .PHONY : src/main.o
 
@@ -189,6 +261,15 @@ help:
 	@echo "... src/BattleField.o"
 	@echo "... src/BattleField.i"
 	@echo "... src/BattleField.s"
+	@echo "... src/Pistol.o"
+	@echo "... src/Pistol.i"
+	@echo "... src/Pistol.s"
+	@echo "... src/Player.o"
+	@echo "... src/Player.i"
+	@echo "... src/Player.s"
+	@echo "... src/Vector.o"
+	@echo "... src/Vector.i"
+	@echo "... src/Vector.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

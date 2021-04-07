@@ -2,10 +2,11 @@ CMakeFiles/counter_strike.dir/src/BattleField.c.o: \
  /home/nikolay/Desktop/Code-Academy/Counter-Strike/src/BattleField.c \
  /usr/include/stdc-predef.h \
  /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/BattleField.h \
- /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/Player.h \
+ /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/Vector.h \
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
- /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/Pistol.h \
  /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/Defines.h \
+ /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/Player.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -13,7 +14,6 @@ CMakeFiles/counter_strike.dir/src/BattleField.c.o: \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/stddef.h \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
@@ -26,4 +26,6 @@ CMakeFiles/counter_strike.dir/src/BattleField.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
- /usr/include/x86_64-linux-gnu/bits/sys_errlist.h
+ /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
+ /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/Pistol.h \
+ /home/nikolay/Desktop/Code-Academy/Counter-Strike/include/BattleField.h

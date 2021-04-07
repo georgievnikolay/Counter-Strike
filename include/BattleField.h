@@ -1,19 +1,16 @@
 #ifndef BATTLEFIELD_H_
 #define BATTLEFIELD_H_
 
-#include "Player.h"
+#include "Vector.h"
+#include "Defines.h"
 
 typedef struct {
-  Player players[PLAYERS_COUNT];
+  Vector Terrorists;
+  Vector CounterTerrorists;
 } BattleField;
 
-void createPlayers(BattleField* bf);
-
-void buyPistols(BattleField* bf);
+void printData(BattleField *bf) ;
 
 void startBattle(BattleField* bf);
-
-void pistolInit(Player *currPlayer, PistolType pistolType, int damage, int clipSize, int ammo);
-void playerInit(Player *currPlayer, int healthInput, int armorInput, int indx) ;
 
 #endif /* BATTLEFIELD_H_ */

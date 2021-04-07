@@ -14,9 +14,13 @@ add_executable(
         ${INC_DIR}/BattleField.h
         ${INC_DIR}/Player.h
         ${INC_DIR}/Pistol.h
-        
+        ${INC_DIR}/Vector.h
+
         ${SRC_DIR}/main.c
         ${SRC_DIR}/BattleField.c
+        ${SRC_DIR}/Player.c
+        ${SRC_DIR}/Pistol.c
+        ${SRC_DIR}/Vector.c
 )
 
 target_include_directories(

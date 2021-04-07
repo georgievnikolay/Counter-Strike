@@ -81,12 +81,12 @@ clean: CMakeFiles/counter_strike.dir/clean
 CMakeFiles/counter_strike.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/counter_strike.dir/build.make CMakeFiles/counter_strike.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles --progress-num=1,2,3 "Built target counter_strike"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target counter_strike"
 .PHONY : CMakeFiles/counter_strike.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/counter_strike.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/counter_strike.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nikolay/Desktop/Code-Academy/Counter-Strike/build/CMakeFiles 0
 .PHONY : CMakeFiles/counter_strike.dir/rule
