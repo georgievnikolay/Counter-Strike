@@ -19,7 +19,7 @@ typedef struct {
 } PlayerVitalData;
 
 typedef enum{
-  PLAYERS_IN_TEAM = 1, TOTAL_TEAMS = 2
+  PLAYERS_IN_TEAM = 1
 } TeamDefines;
 
 #endif /* DEFINES_H_ */

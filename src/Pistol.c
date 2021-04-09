@@ -45,8 +45,48 @@ static bool shoot(Player *attacker, Player *enemy) {
     healthPierce = GLOCK_HEALTH_PIERCE_PERCENTAGE;
   }
 
-  
+  if(clipHasRemainingBullets(attacker)) {
+    if(enemyHasArmor(enemy)) {
+      reduceArmor(attacker, enemy, armorPierce);
+      reduceHealth(attacker, enemy, healthPierce);
+    }
+    else {
+      reduceHealth(attacker, enemy, UNARMORED_PIERCE_PERCENTAGE);
+    }
 
+    discardBullet(attacker);
+    printf("Enemy left with: %d health and %d armor\n", enemy->playerData.health, enemy->playerData.armor);
+
+    return true;
+  }
+  return false;
+}
+
+static bool deagleAttack(Player *attacker, Player *enemy) {
+    if(shoot(attacker, enemy)) {
+      if(enemyKilled(enemy)) { 
+        return true;
+      }
+    }
+    else {
+      reload(attacker);
+    }
+    return false;
+}
+
+static bool glockAttack(Player *attacker, Player *enemy) {
+    for(int i = 0; i < ROUNDS_PER_FIRE; i++) {
+      if(shoot(attacker, enemy)) {
+        if(enemyKilled(enemy)) {
+          return true;
+        }
+      }
+      else {
+        reload(attacker);
+        break;
+      }
+    }
+    return false;
 }
 
 void pistolInit(Player *currPlayer) {
@@ -63,5 +103,11 @@ void pistolInit(Player *currPlayer) {
   currPlayer->pistol.clipSize = pistolClipSize;
   currPlayer->pistol.currClipBullets = pistolClipSize;
   currPlayer->pistol.remainingAmmo = pistolRemainingAmmo;
-}
 
+  if(pistolId == GLOCK) {
+    currPlayer->pistol.fire = glockAttack;
+  }
+  else {
+    currPlayer->pistol.fire = deagleAttack;
+  }
+}
