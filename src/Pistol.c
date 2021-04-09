@@ -24,7 +24,7 @@ static void reload(Player *attacker) {
       attacker->pistol.currClipBullets++;
       attacker->pistol.remainingAmmo--;
 
-      if (pistolIsEmpty(attacker)) {  //<----------- !
+      if (attacker->pistol.remainingAmmo == 0) {
         break;
       }
     }
@@ -63,30 +63,30 @@ static bool shoot(Player *attacker, Player *enemy) {
 }
 
 static bool deagleAttack(Player *attacker, Player *enemy) {
+  if(shoot(attacker, enemy)) {
+    if(enemyKilled(enemy)) { 
+      return true;
+    }
+  }
+  else {
+    reload(attacker);
+  }
+  return false;
+}
+
+static bool glockAttack(Player *attacker, Player *enemy) {
+  for(int i = 0; i < ROUNDS_PER_FIRE; i++) {
     if(shoot(attacker, enemy)) {
-      if(enemyKilled(enemy)) { 
+      if(enemyKilled(enemy)) {
         return true;
       }
     }
     else {
       reload(attacker);
+      break;
     }
-    return false;
-}
-
-static bool glockAttack(Player *attacker, Player *enemy) {
-    for(int i = 0; i < ROUNDS_PER_FIRE; i++) {
-      if(shoot(attacker, enemy)) {
-        if(enemyKilled(enemy)) {
-          return true;
-        }
-      }
-      else {
-        reload(attacker);
-        break;
-      }
-    }
-    return false;
+  }
+  return false;
 }
 
 void pistolInit(Player *currPlayer) {

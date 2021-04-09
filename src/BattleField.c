@@ -32,6 +32,7 @@ static bool processTurn(Vector *attackerTeam, Vector *enemyTeam) {
     }
 
     if(vectorIsEmpty(enemyTeam)) {
+      /*Comment out the next line in case you want to play with more players*/
       printf("\nPlayer with ID: %d wins!\n", attacker->playerId);
       return true;
     }

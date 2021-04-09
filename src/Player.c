@@ -11,12 +11,12 @@ static void playerInit(Player *currPlayer, int indx) {
   currPlayer->playerId = indx;
 }
 
-void createTerrorists(BattleField *bf) { //<-- one function
+void createTerrorists(BattleField *bf) {
   vectorInit(&bf->Terrorists, PLAYERS_IN_TEAM);
 
   int playerIndex = 0;
   for (int i = 0; i < PLAYERS_IN_TEAM; i++) {
-    Player *newTerrorist = malloc(sizeof(Player)); //<<--kato gi killnem gi osvobojdavame
+    Player *newTerrorist = malloc(sizeof(Player));
     CHECK_ALLOCATION_ERROR(newTerrorist);
 
     playerInit(newTerrorist, playerIndex);
