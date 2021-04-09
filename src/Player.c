@@ -11,38 +11,59 @@ static void playerInit(Player *currPlayer, int indx) {
   currPlayer->playerId = indx;
 }
 
-static void createTerrorists(BattleField *bf) { //<-- one function
+void createTerrorists(BattleField *bf) { //<-- one function
   vectorInit(&bf->Terrorists, PLAYERS_IN_TEAM);
 
   int playerIndex = 0;
   for (int i = 0; i < PLAYERS_IN_TEAM; i++) {
     Player *newTerrorist = malloc(sizeof(Player)); //<<--kato gi killnem gi osvobojdavame
+    CHECK_ALLOCATION_ERROR(newTerrorist);
 
-    playerInit(&newTerrorist[i], playerIndex);
-    vectorPush(&bf->Terrorists, &(newTerrorist[i]));
+    playerInit(newTerrorist, playerIndex);
+    vectorPush(&bf->Terrorists, newTerrorist);
     playerIndex += 2;
   }
 }
 
-static void createCounterTerrorists(BattleField *bf) {
+void createCounterTerrorists(BattleField *bf) {
   vectorInit(&bf->CounterTerrorists, PLAYERS_IN_TEAM);
 
   int playerIndex = 1;
   for (int i = 0; i < PLAYERS_IN_TEAM; i++) {
     Player *newCounterTerrorist = malloc(sizeof(Player));
-    playerInit(&newCounterTerrorist[i], playerIndex);
-    vectorPush(&bf->CounterTerrorists, &(newCounterTerrorist[i]));
+    CHECK_ALLOCATION_ERROR(newCounterTerrorist);
+
+    playerInit(newCounterTerrorist, playerIndex);
+    vectorPush(&bf->CounterTerrorists, newCounterTerrorist);
     playerIndex += 2;
   }
 }
 
-void createPlayers(BattleField *bf) {
-  createTerrorists(bf);
-  createCounterTerrorists(bf);
+bool enemyHasArmor(Player *enemy){
+  if (enemy->playerData.armor > 0) {
+    return true;
+  }
+  return false;
 }
 
-void deinit(BattleField *bf) {
-  vectorFree(&bf->Terrorists);
-  vectorFree(&bf->CounterTerrorists);
-  //Player* ptrT, *ptrC; 
+void reduceArmor(Player *attacker, Player *enemy, float reducePercentage) {
+  int totalDamage = attacker->pistol.damagePerRound * reducePercentage;
+
+  enemy->playerData.armor -= totalDamage;
+  if (enemy->playerData.armor < 0) {
+    enemy->playerData.health += enemy->playerData.armor;
+    enemy->playerData.armor = 0;
+  }
+}
+
+void reduceHealth(Player *attacker, Player *enemy, float reducePercentage) {
+  int totalDamage = attacker->pistol.damagePerRound * reducePercentage;
+  enemy->playerData.health -= totalDamage;
+}
+
+bool enemyKilled(Player *enemy){
+  if (enemy->playerData.health <= 0) {
+    return true;
+  }
+  return false;
 }

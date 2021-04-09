@@ -1,47 +1,67 @@
 #include "BattleField.h"
 #include "Player.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-void printData(BattleField *bf) {
-  Player *currTerrorist, *currCounterTerrorist;
-
-  currTerrorist = vectorBack(&bf->Terrorists);
-  currCounterTerrorist = vectorBack(&bf->CounterTerrorists);
-
-  printf("\nTerrorist player: %d %d %d\n", currTerrorist->playerData.health, currTerrorist->playerData.armor, currTerrorist->playerId);
-  printf("CounterTerrorist player: %d %d %d\n", currCounterTerrorist->playerData.health, currCounterTerrorist->playerData.armor, currCounterTerrorist->playerId);
-  
-  printf("Terrorist player: %d %d %d %d\n", currTerrorist->pistol.pistolType, currTerrorist->pistol.damagePerRound, currTerrorist->pistol.clipSize, currTerrorist->pistol.remainingAmmo);
-  printf("CounterTerrorist player: %d %d %d %d\n", currCounterTerrorist->pistol.pistolType, currCounterTerrorist->pistol.damagePerRound, currCounterTerrorist->pistol.clipSize, currCounterTerrorist->pistol.remainingAmmo);
+void createPlayers(BattleField *bf) {
+  createTerrorists(bf);
+  createCounterTerrorists(bf);
 }
 
+void buyPistols(BattleField *bf) {
+  for(int i = 0; i < PLAYERS_IN_TEAM; i++) {
+    pistolInit(vectorGet(&bf->Terrorists, i));
+    pistolInit(vectorGet(&bf->CounterTerrorists, i));
+  }
+}
 
+static bool processTurn(Vector *attackerTeam, Vector *enemyTeam) {
+  Player *attacker;
+  Player *enemy;
+  int currentTeamSz = vectorGetSize(attackerTeam);
 
+  for (int i = 0; i < currentTeamSz; i++) {
+    attacker = vectorGet(attackerTeam, i);
+    enemy = vectorBack(enemyTeam);
 
-// void startBattle(BattleField *bf) {
-//   while(true)
-//   {
-//     if(processTerroristTurn())
-//     {
-//       printf("Player with ID: %d wins!", PLAYER_ONE); // <<----- typo?
-//       break;
-//     }
-//     if(processCounterTerroristTurn())
-//     {
-//       printf("Player with ID: %d wins!", PLAYER_TWO); // <<----- typo?
-//       break;
-//     }
-//   }
-// }
+    printf("\nPlayerID %d turn:\n", attacker->playerId);
 
-// bool processTerroristTurn() {
-//   return false;
-// }
+    if (attacker->pistol.fire(attacker, enemy)) {
+      free(vectorBack(enemyTeam));
+      vectorPop(enemyTeam);
+    }
 
-// bool processCounterTerroristTurn() {
-//   return false;
-// }
+    if(vectorIsEmpty(enemyTeam)) {
+      printf("\nPlayer with ID: %d wins!\n", attacker->playerId);
+      return true;
+    }
+  }
+  return false;
+}
 
-// bool fire(Player *attacker, Player *enemy) {
-  
-// }
+void startBattle(BattleField *bf) {
+  while(true)
+  {
+    if(processTurn(&bf->Terrorists, &bf->CounterTerrorists))
+    {
+      break;
+    }
+    if(processTurn(&bf->CounterTerrorists, &bf->Terrorists))
+    {
+      break;
+    }
+  }
+}
+
+void deinit(BattleField *bf) {
+  while(!vectorIsEmpty(&bf->Terrorists)) {
+    free(vectorBack(&bf->Terrorists));
+    vectorPop(&bf->Terrorists);
+  }
+  while(!vectorIsEmpty(&bf->CounterTerrorists)) {
+    free(vectorBack(&bf->CounterTerrorists));
+    vectorPop(&bf->CounterTerrorists);
+  }
+  vectorFree(&bf->Terrorists);
+  vectorFree(&bf->CounterTerrorists);
+}

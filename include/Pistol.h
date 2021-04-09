@@ -12,14 +12,17 @@
 
 #define UNARMORED_PIERCE_PERCENTAGE 1
 
+typedef struct Player_t Player;
+
 typedef struct {
   PistolType pistolType;
   int damagePerRound;
   int clipSize;
   int currClipBullets;
   int remainingAmmo;
+  bool (*fire)(Player *attacker, Player *enemy);
 } Pistol;
 
-void buyPistols(BattleField* bf);
+void pistolInit(Player *currPlayer);
 
 #endif /* PISTOL_H_ */

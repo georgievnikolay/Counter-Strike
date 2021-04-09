@@ -9,8 +9,12 @@ typedef struct {
   Vector CounterTerrorists;
 } BattleField;
 
-void printData(BattleField *bf) ;
+void createPlayers(BattleField *bf);
 
-void startBattle(BattleField* bf);
+void buyPistols(BattleField *bf);
+
+void startBattle(BattleField *bf);
+
+void deinit(BattleField *bf);
 
 #endif /* BATTLEFIELD_H_ */
