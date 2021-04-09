@@ -31,5 +31,4 @@ void reduceHealth(Player *attacker, Player *enemy, float reducePercentage);
 
 bool enemyKilled(Player *enemy);
 
-
 #endif /* PLAYER_H_ */

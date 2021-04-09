@@ -18,7 +18,8 @@ typedef struct {
   int armor;
 } PlayerVitalData;
 
-typedef enum{
+/*Increase in case you want to play with more players in team*/
+typedef enum {
   PLAYERS_IN_TEAM = 1
 } TeamDefines;
 

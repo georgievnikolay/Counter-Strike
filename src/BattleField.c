@@ -44,10 +44,13 @@ void startBattle(BattleField *bf) {
   {
     if(processTurn(&bf->Terrorists, &bf->CounterTerrorists))
     {
+      /*Remove comments in case you want to play with more players in team*/
+      //printf("\nTerrorists Win!\n");
       break;
     }
     if(processTurn(&bf->CounterTerrorists, &bf->Terrorists))
     {
+      //printf("\nCounter-Terrorists Win!\n");
       break;
     }
   }

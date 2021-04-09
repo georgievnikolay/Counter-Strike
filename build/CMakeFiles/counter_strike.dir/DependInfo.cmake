@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/BattleField.c" "CMakeFiles/counter_strike.dir/src/BattleField.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/BattleField.c.o.d"
-  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/Pistol.c" "CMakeFiles/counter_strike.dir/src/Pistol.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/Pistol.c.o.d"
-  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/Player.c" "CMakeFiles/counter_strike.dir/src/Player.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/Player.c.o.d"
-  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/Vector.c" "CMakeFiles/counter_strike.dir/src/Vector.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/Vector.c.o.d"
-  "/home/nikolay/Desktop/Code-Academy/Counter-Strike/src/main.c" "CMakeFiles/counter_strike.dir/src/main.c.o" "gcc" "CMakeFiles/counter_strike.dir/src/main.c.o.d"
+  "C:/Users/boni_/Documents/Counter-Strike/src/BattleField.c" "CMakeFiles/counter_strike.dir/src/BattleField.c.obj" "gcc" "CMakeFiles/counter_strike.dir/src/BattleField.c.obj.d"
+  "C:/Users/boni_/Documents/Counter-Strike/src/Pistol.c" "CMakeFiles/counter_strike.dir/src/Pistol.c.obj" "gcc" "CMakeFiles/counter_strike.dir/src/Pistol.c.obj.d"
+  "C:/Users/boni_/Documents/Counter-Strike/src/Player.c" "CMakeFiles/counter_strike.dir/src/Player.c.obj" "gcc" "CMakeFiles/counter_strike.dir/src/Player.c.obj.d"
+  "C:/Users/boni_/Documents/Counter-Strike/src/Vector.c" "CMakeFiles/counter_strike.dir/src/Vector.c.obj" "gcc" "CMakeFiles/counter_strike.dir/src/Vector.c.obj.d"
+  "C:/Users/boni_/Documents/Counter-Strike/src/main.c" "CMakeFiles/counter_strike.dir/src/main.c.obj" "gcc" "CMakeFiles/counter_strike.dir/src/main.c.obj.d"
   )
 
 # Targets to which this target links.
